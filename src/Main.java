@@ -1,40 +1,37 @@
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-        /*  Errors */
+        /* ASSIGNMENT OPERATORS */
 
-        /* Compiler Error's */
-        // Errors that are shown before you run the program
+        //Assignment =
+        int mana = 100;
+        System.out.println("Mana: " + mana);
+        // int x = 1000;
+        // mana = x;
 
-        // int x = 0.0; // Incompatible type
-        // int x = 0; // x is already defined
-
-        // }} too many closing curly brackets!
-
-        // int z = 0 // Error: ; expected
-
-
-        /* Runtime Error's */
-        // Errors that happen during the program
-
-        // float y = 1 / 0; // Exception: Divide by zero
+        // ADDITION +=
+        mana += 20; // mana = mana + 20
+        System.out.println("Mana: " + mana);
+        mana++; // Increment
+        System.out.println("Mana: " + mana);
 
 
-        // Exception: NullPointerException
-        // String text = null;
-        // System.out.println("My text is: " + text);
+        // SUBTRACTION
+        mana--; // DECREMENT
+        System.out.println("Mana: " + mana);
+        mana -= 60;
+        System.out.println("Mana: " + mana);
 
-        // int length = text.length();
-        // System.out.println("The length of the text is: " + length);
 
+        // MULTIPLY *=
+        mana*= 2;
+        System.out.println("Mana: " + mana);
 
-        // FAIL LOUDLY! --> Something to fix
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter anything but a number, that's gonna throw an error!");
+        // DIVIDE
+        mana /= 4;
+        System.out.println("Mana: " + mana);
 
-        int number = scanner.nextInt();
-        System.out.println("you just typed: " + number);
-
+        // MODULO
+        mana %= 2;
+        System.out.println("Mana: " + mana);
     }
 }
