@@ -1,57 +1,31 @@
+import java.util.Scanner;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        /* DATA TYPES & VARIABLES */
+        /* INPUT & OUTPUT */
 
-        // Hello I am a comment
-        /*
-         * And I am a multiline Comment!
-         * I can come in quite handy for explaining stuff!
-         */
+        /* OUTPUT */
+        System.out.println("Hello world! This is my first output");
 
-        // Step 1: Read in File
-        // Step 2: Clean Up Input...
+        // values - Printing values
+        int life = 42;
+        System.out.println(life);
 
-        /* Variables */
-
-        // datatype name_of_variable; // Declaration
-        // OR
-        // datatype name_of_variable = value_of_variable; // Initialization (Declaration + Assignment of Value)
-
-        /* DATA TYPES */
-
-        // Integers (Store whole numbers (including negative ones))
-        // Go from -2147483648 to 2147483647
-        int points;
-        points = 100;
-        int x = -69;
+        // value and string - string concetation
+        int grade = 85;
+        System.out.println("your grade is " + grade);
 
 
-        // Floating Point Numbers (float & double)
-        float pi = 3.14159265f; // requires the f suffix, typically used in Minecraft modding?
-        double e = 2.718281828; // does not require any suffix, default nowadays
+        /* INPUT */
+        System.out.println("Input a number"); // asks for a number in the CLI
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt(); // int requires it to be a number
+        System.out.println("You just typed " + number);
 
-        // Scientific notation: 314159265 * 10^-8
-
-
-        // Booleans (True or False)
-        boolean likedVideo = true;
-        boolean subscribed = false;
-
-
-        // Chars & Strings
-        char grade = 'A';
-        String name = "This is a string";
-
-        /* We have
-        * Int = integer
-        * Float =
-        * Double =
-        * boolean = Only true or false
-        * char = character(1 character!)
-        * string = Multiple characters
-         */
+        String input = scanner.next();
+        System.out.println("You just typed (string): " + input);
 
     }
 }
