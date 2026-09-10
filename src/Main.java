@@ -29,12 +29,9 @@ public class Main {
 
 
         // Floating Point Numbers (float & double)
-        float pi = 3.14159265f;
-        double e = 2.718281828;
+        float pi = 3.14159265f; // requires the f suffix, typically used in Minecraft modding?
+        double e = 2.718281828; // does not require any suffix, default nowadays
 
-        float accountValue = 20.20f; // NEVER DO THIS!
-
-        // For real numbers, however! Precision can be an issue!
         // Scientific notation: 314159265 * 10^-8
 
 
@@ -45,8 +42,16 @@ public class Main {
 
         // Chars & Strings
         char grade = 'A';
-        String name = "Kaupenjoe likes this video";
+        String name = "This is a string";
 
+        /* We have
+        * Int = integer
+        * Float =
+        * Double =
+        * boolean = Only true or false
+        * char = character(1 character!)
+        * string = Multiple characters
+         */
 
     }
 }
