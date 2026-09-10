@@ -1,37 +1,38 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        /* ASSIGNMENT OPERATORS */
+        /* BOOLEANS & LOGIC */
 
-        //Assignment =
-        int mana = 100;
-        System.out.println("Mana: " + mana);
-        // int x = 1000;
-        // mana = x;
+        // Booleans are either true or false
+        boolean isSurvival = true;
+        System.out.println("Player is in Survival: " + isSurvival);
+        boolean isAdventure = false;
+        System.out.println("Player is in Adventure: " + isAdventure);
 
-        // ADDITION +=
-        mana += 20; // mana = mana + 20
-        System.out.println("Mana: " + mana);
-        mana++; // Increment
-        System.out.println("Mana: " + mana);
+        boolean isCreative = false;
+        System.out.println("Player is in creative: " + isCreative);
 
 
-        // SUBTRACTION
-        mana--; // DECREMENT
-        System.out.println("Mana: " + mana);
-        mana -= 60;
-        System.out.println("Mana: " + mana);
+        /* COMPARISON (< <= >= > == !=) */
+        int points = 80;
+        int pointsForPassing = 55;
+        boolean hasPassedTest = points >= pointsForPassing;
+        System.out.println("Passed: "+ hasPassedTest);
+
+        int health = 10;
+        boolean isAlive = health > 0;
+        System.out.println("Player is alive: " + isAlive);
+
+        // VARIABLE/VALUE comparison VARIABlE/VALUE
+        //int + int ==> int
+
+        // BEWARE of STRINGS
+        Scanner scanner = new Scanner(System.in);
+        String name = scanner.next();
+        boolean isLUHoefje = name == "LUHoefje"
 
 
-        // MULTIPLY *=
-        mana*= 2;
-        System.out.println("Mana: " + mana);
 
-        // DIVIDE
-        mana /= 4;
-        System.out.println("Mana: " + mana);
-
-        // MODULO
-        mana %= 2;
-        System.out.println("Mana: " + mana);
     }
 }
