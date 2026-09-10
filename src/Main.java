@@ -1,58 +1,40 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        /* INTEGERS & MATH */
+        /*  Errors */
 
-        int a = 100;
-        int b = 200;
+        /* Compiler Error's */
+        // Errors that are shown before you run the program
 
-        /* ADDITION */
-        int sum = a + b;
-        System.out.println("Sum:" + sum);
+        // int x = 0.0; // Incompatible type
+        // int x = 0; // x is already defined
 
-        sum = 50;
-        System.out.println("Sum:" + sum); // different answer as we changed the variable sum
+        // }} too many closing curly brackets!
 
-
-        /* SUBTRACTION */
-        int sub = a - b;
-        System.out.println("Subtraction: " + sub);
-
-        /* MULTIPLICATION */
-        int multi = a * b;
-        System.out.println("Multiplication: " + multi);
-
-        /* DIVISION */
-        int division = a / b;
-        System.out.println("Division: " + division); // will always display 0
-
-        double x = 100;
-        double y = 200;
-        double doubleDivision = x / y;
-        System.out.println("Division: " + doubleDivision); // this will not display 0
-
-        // No division by 0!
-
-        /* REMAINDER (MODULO) */
-        int remainder = 100 % 2; // = 0 means it is an even number | = 1 means it is an uneven number
-        System.out.println("Remainder of 100 / 2: " + remainder);
-
-        remainder = 100 % 3;
-        System.out.println("Remainder of 100 / 3 : " + remainder);
-
-        /* MATH METHODS */
-        System.out.println("Rounding: " + Math.round(6.4));         // Output: 6
-        System.out.println("Rounding down: " + Math.floor(6.4));    // Output: 6
-        System.out.println("Rounding up: " + Math.ceil(6.4));       // Output: 7
-        System.out.println("Exponent : " + Math.pow(2, 3));         // Output: 2^3 = 8
-
-        // More "Math Methods"
-        // Math.
+        // int z = 0 // Error: ; expected
 
 
-        // "RANDOM" Numbers
-        System.out.println("Random number between 0 - 10: " + Math.round(Math.random() * 10));
-        System.out.println("Random number between 0 - 10: " + Math.random() * 10);
-        System.out.println("Random number between 0 - 20: " + Math.round(Math.random() * 20));
+        /* Runtime Error's */
+        // Errors that happen during the program
+
+        // float y = 1 / 0; // Exception: Divide by zero
+
+
+        // Exception: NullPointerException
+        // String text = null;
+        // System.out.println("My text is: " + text);
+
+        // int length = text.length();
+        // System.out.println("The length of the text is: " + length);
+
+
+        // FAIL LOUDLY! --> Something to fix
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter anything but a number, that's gonna throw an error!");
+
+        int number = scanner.nextInt();
+        System.out.println("you just typed: " + number);
 
     }
 }
