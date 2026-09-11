@@ -10,23 +10,29 @@ public class Main {
         System.out.println("+ - * /");
         System.out.println("--------------------------------------------------");
 
-
         Scanner scanner = new Scanner(System.in);
         String isOperation = scanner.next();
 
+
+        /*---------------------------------------------------------------------------------------*/
         // Ask which numbers the user wants to use
+
+        // Number 1
         System.out.println("Select your first number: ");
         System.out.println("--------------------------------------------------");
         int number1 = scanner.nextInt();
-
         System.out.println("Selected number: " + number1);
 
+        // Number 2
         System.out.println("Select your second number: ");
         System.out.println("--------------------------------------------------");
         int number2 = scanner.nextInt();
-
         System.out.println("Selected number: " + number2);
 
+
+        /*---------------------------------------------------------------------------------------*/
+
+        // This is where the result will be calculated
         int result = 0;
 
         switch (isOperation) {
@@ -50,6 +56,10 @@ public class Main {
                 System.out.println("Invalid input: " + isOperation);
                 return;
         }
+
+
+        /*---------------------------------------------------------------------------------------*/
+        // Output the result
         System.out.println("--------------------------------------------------");
         System.out.println("Result: " + number1 + " " + isOperation + " " + number2 + " = " + result);
 
