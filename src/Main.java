@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         /* Exercise 1a: Basic calculator */
 
-        // Ask which operation the user wants to do
+        // Ask which operation the user wants to use
         System.out.println("--------------------------------------------------");
         System.out.println("What operation do you want to do?");
         System.out.println("+ - * /");
@@ -14,7 +14,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String isOperation = scanner.next();
 
-        // We ask the numbers that the user want to use
+        // Ask which numbers the user wants to use
         System.out.println("Select your first number: ");
         System.out.println("--------------------------------------------------");
         int number1 = scanner.nextInt();
