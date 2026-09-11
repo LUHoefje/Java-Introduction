@@ -2,70 +2,62 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        /* BOOLEANS & LOGIC */
 
-        // Booleans are either true or false
-        boolean isSurvival = true;
-        System.out.println("Player is in Survival: " + isSurvival);
-        boolean isAdventure = false;
-        System.out.println("Player is in Adventure: " + isAdventure);
-
-        boolean isCreative = false;
-        System.out.println("Player is in creative: " + isCreative);
-
-
-        /* COMPARISON (< <= >= > == !=) */
-        int points = 80;
-        int pointsForPassing = 55;
-        boolean hasPassedTest = points >= pointsForPassing;
-        System.out.println("Passed: "+ hasPassedTest);
-
-        int health = 10;
-        boolean isAlive = health > 0;
-        System.out.println("Player is alive: " + isAlive);
-
-        // VARIABLE/VALUE comparison VARIABlE/VALUE
-        //int + int ==> int
-
-        // BEWARE of STRINGS
+        /* IF & SWITCH */
         Scanner scanner = new Scanner(System.in);
-        String name = scanner.next();
-        boolean isLUHoefje = name.equals("LUHoefje"); // .equals for strings
+        System.out.println("How much health you have?");
+        int health = scanner.nextInt();
+        boolean isAlive = health > 0;
 
-        System.out.println("Is your name LUHoefje? " + isLUHoefje);
+        // check if you are alive with the given argument
+        if(isAlive) {
+            System.out.println("You are still alive");
+        } else {
+            System.out.println("You are not alive");
+        }
 
 
-        /* LOGIC */
-        // Addition and "subtraction" for booleans
+        // checks if you passed with honors or just passed with the given argument
+        System.out.println("How many points did you have in the exam?");
+        int points = scanner.nextInt();
 
-        // (BOOLEAN logic BOOLEAN) ==> BOOLEAN
+        if(points >= 100) {
+            System.out.println("Passed with honors");
+        } else if(points >= 50) {
+            System.out.println("You passed");
+        } else {
+            System.out.println("You failed");
+        }
 
-        boolean passTest1 = true;
-        boolean passTest2 = true;
-        boolean hasHonors = passTest1 && passTest2;
 
-        boolean hasPickaxe = true;
-        int durability = 5;
-        int neededDurability = 9;
+        /* SWITCH */
 
-        boolean canMine3x3Area = (hasPickaxe && (durability >= neededDurability)) || isCreative;
+        System.out.println("Give me an number between 0 and 5");
+        int studentId = scanner.nextInt();
+        switch (studentId) {
+            case 0:
+                System.out.println("Student Sarah has id 0");
+                break;
+            case 1:
+                System.out.println("Student Mara has id 1");
+                break;
+            case 2:
+                System.out.println("Student Richard has id 2");
+                break;
+            case 3:
+                System.out.println("Student John has id 3");
+                break;
+            case 4:
+                System.out.println("Student Ludwig has id 4");
+                break;
+            case 5:
+                System.out.println("Student Nano id 5");
+                break;
+            default:
+                System.out.println("ERROR: Student with id " + studentId + " not found!");
+    }
 
-        System.out.println("You can mine a 3x3 area: " + canMine3x3Area);
 
-        /* DRINKING AGE EXAMPLE */
-        System.out.println("What is your age?");
-        int age = scanner.nextInt();
-        System.out.println("Put in true or false, are you from Europe?");
-        boolean isEuropean = scanner.nextBoolean();
 
-        int euDrinkingAge = 18;
-        int usDrinkingAge = 21;
-
-        boolean isAmerican = !isEuropean;
-        boolean couldDrinkInEu = age >= euDrinkingAge;
-        boolean couldDrinkInUs = age >= usDrinkingAge;
-
-        boolean canPersonDrinkAlcohol = (isEuropean && couldDrinkInEu) || (isAmerican && couldDrinkInUs);
-        System.out.println("Can you drink? " + canPersonDrinkAlcohol);
     }
 }
