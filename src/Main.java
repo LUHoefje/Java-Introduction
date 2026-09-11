@@ -2,39 +2,58 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        /* STRING & STRING METHODS */
+        /* Exercise 1a: Basic calculator */
 
-        String name = "LUHoefje";
-        String occupation = "Apprentice";
-        occupation += "r";
-
-        System.out.println("My name is " + name + " my occupation is " + occupation);
-
-        String sentence = "Hello, how are you doing? Hello";
-        System.out.println(sentence);
-
-        // Upper case & Lower case
-        System.out.println("Lower case: " + sentence.toLowerCase()); // All lower case
-        System.out.println("Upper case: " + sentence.toUpperCase()); // All upper case
-
-        // Contain
-        System.out.println("Does it contain \"hello\": " + sentence.contains("hello"));
-
-        // Replacing
-        System.out.println(sentence.replace("Hello", "Howdy, Howdy"));
-
-        // charAt
-        System.out.println(sentence.charAt(8));
-
-        System.out.println(sentence);
+        // Ask which operation the user wants to do
+        System.out.println("--------------------------------------------------");
+        System.out.println("What operation do you want to do?");
+        System.out.println("+ - * /");
+        System.out.println("--------------------------------------------------");
 
 
-        System.out.println("---------------------------------------------------------");
-
-        // Think back String Comparisons!
-        System.out.println("What is your name");
         Scanner scanner = new Scanner(System.in);
+        String isOperation = scanner.next();
+
+        // We ask the numbers that the user want to use
+        System.out.println("Select your first number: ");
+        System.out.println("--------------------------------------------------");
+        int number1 = scanner.nextInt();
+
+        System.out.println("Selected number: " + number1);
+
+        System.out.println("Select your second number: ");
+        System.out.println("--------------------------------------------------");
+        int number2 = scanner.nextInt();
+
+        System.out.println("Selected number: " + number2);
+
+        int result = 0;
+
+        switch (isOperation) {
+            case "+":
+                result = number1 + number2;
+                break;
+            case "-":
+                result = number1 - number2;
+                break;
+            case "*":
+                result = number1 * number2;
+                break;
+            case "/":
+                if (number2 == 0) {
+                    System.err.println("Error: Cannot divide by zero!");
+                    return;
+                }
+                result = number1 / number2;
+                break;
+            default:
+                System.out.println("Invalid input: " + isOperation);
+                return;
+        }
+        System.out.println("--------------------------------------------------");
+        System.out.println("Result: " + number1 + " " + isOperation + " " + number2 + " = " + result);
 
 
+        /* Exercise 1b: Basic Resource Miner */
     }
 }
